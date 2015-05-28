@@ -1,0 +1,29 @@
+
+
+{% block title %} IMDB STORYLINE{% endblock %}
+
+{% block content %}
+
+<html>
+<table style="width:100%">
+<tr>
+	<th align="left" bgcolor="#009966">ID</th>
+    <th align="left" bgcolor="#009966">Movie Name</th>
+    <th align="centre" bgcolor="#009966">Movie Rating</th>
+	<th align="centre" bgcolor="#009966">Movie Storyline</th>
+  </tr>
+ 
+   {% for s in storyline %} 
+  <tr>
+	<td bgcolor="#009933">{{s.id}}</td>
+    <td bgcolor="#00FF66">{{ s.movie_name}}</td>
+    <td bgcolor="#00FF66">{{s.movie_rating}}</td> 
+	<td bgcolor="#00FF66">{{s.movie_story}}</td>
+  </tr>
+  
+  {% endfor %}
+
+</table>
+{% endblock %}
+
+</html>

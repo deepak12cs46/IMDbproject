@@ -1,0 +1,30 @@
+<html>
+<head>
+        <title>Rating</title>
+    </head>
+{% block title %} <h2>IMDB RATING</h2>{% endblock %}
+
+{% block content %}
+
+
+<table style="width:100%">
+<tr>
+	<th align="left" bgcolor="#6666FF">ID</th>
+    <th align="left" bgcolor="#6666FF">Movie Name</th>
+    <th align="centre" bgcolor="#6666FF">Movie Rating</th> 
+  </tr>
+ 
+   {% for rat in rrate %} 
+  <tr>
+	<td bgcolor="#9999FF" color="white">{{rat.id}}</td>
+    <td bgcolor="#33FFFF">{{ rat.movie_name}}</td>
+    <td bgcolor="#33FFFF">{{rat.movie_rating}}</td> 
+  </tr>
+  
+  {% endfor %}
+
+</table>
+
+
+{% endblock %}
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+    <head>
+        <title>CAST</title>
+    </head>
+<table>
+<tr>
+	<th align="left" bgcolor="#6666FF">ID</th>
+    <th align="centre" bgcolor="#6666FF">Movie Name</th>
+    <th align="centre" bgcolor="#6666FF">Movie Rating</th> 
+	<th align="centre" bgcolor="#6666FF">Cast1</th> 
+	<th align="centre" bgcolor="#6666FF">Cast2</th> 
+	<th align="centre" bgcolor="#6666FF">Cast3</th> 
+	<th align="centre" bgcolor="#6666FF">Cast4</th> 
+	<th align="centre" bgcolor="#6666FF">Cast5</th> 
+	<th align="centre" bgcolor="#6666FF">Cast6</th> 
+	<th align="centre" bgcolor="#6666FF">Cast7</th> 
+  </tr>
+
+  {% for cst in cast %}
+		<tr>
+			<td bgcolor="#48D1CC">{{cst.id}}</td>
+			<td bgcolor="#48D1CC">{{ cst.movie_name}}</td>
+			<td bgcolor="#48D1CC">{{cst.movie_rating}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast1}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast2}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast3}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast4}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast5}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast6}}</td>
+			<td bgcolor="#48D1CC">{{cst.cast7}}</td>
+		</tr>
+  {% endfor %}
+  </table>
+</html>
